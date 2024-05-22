@@ -1,23 +1,35 @@
-# Zakat and Charity Management System
+# Zakat And Donation Platform
+---
+This project aims to develop a database system for collecting and distributing Zakat and donation.
 
-## Introduction
 
-The purpose of this application is to centrally collect and distribute zakat and charity. It maintains proper collection and donation in a systematic way, aiding Muslims in fulfilling their annual zakat obligations. The application helps users calculate the minimum amount they need to donate to fulfill the conditions of paying zakat and keeps track of their donations in a transparent manner. Additionally, it supports general charity contributions for emergency situations, ensuring timely and effective distribution of aid.
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Database Implementation](#database-implementation)
+	- [ER diagram](#er-diagram)
+	- [Relationships](#relationships)
+	- [Relational Mapping](#relational-mapping)
+	- [Normalization](#normalization)
+- [GUI Implementation](#gui-implementation)
+- [Technology](#technnology)
+- [Project Structure](#project-structure)
+- [Installation and Usage](#installation-and-usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Objective
+## Project Overview
+Zakat and donation platform is mainly focused on database design and implementation. It also involves the design and implementation of a database schema using SQLite3 and a GUI using PyQt.
 
-The primary objective of this project is to improve the practice of zakat collection and distribution in our nation. By centralizing the process, we aim to ensure that zakat reaches those who qualify in a timely manner, especially during natural disasters. This project also aims to create a platform for efficient charity fund management, ensuring that aid reaches the genuine deprived individuals.
+The system consists of three user roles: 
+- Donor, 
+- Representative, 
+- Admin. 
 
-## Motivation
+Each user must log in with a unique username. Donors can update their information, make zakat or charity contributions, and view their donation history. Representatives can view the total amount received, and Admins can manage the overall budget and transactions.
 
-- To enhance the practice of zakat collection and distribution according to Shariah.
-- To provide timely assistance to victims of natural disasters and ensure aid reaches the true needy in rural areas.
-- To create an efficient platform for anyone to contribute to charity and participate in welfare activities.
 
-## Project Description
-
-The project involves the design and implementation of a database schema using SQLite3 and a GUI using PyQt. The system consists of three user roles: Donor, Representative, and Admin. Each user must log in with a unique username. Donors can update their information, make zakat or charity contributions, and view their donation history. Representatives can view the total amount received, and Admins can manage the overall budget and transactions.
-
+## Database Implementation
+The Database is designed using conventional methods. The ER diagram shows the general relations and entities then the normalization form is obtained using systematic approach.
 ### ER Diagram
 
 The basic schema includes six strong entities:
@@ -50,9 +62,6 @@ Entities and relationships are converted into tables:
 
 All basic relations are in at least 3NF form. Redundant data storage is minimized, ensuring efficient data management and retrieval.
 
-### Sample Tables and SQL Commands
-
-Sample tables and SQL commands are used to manage and query data effectively. Commands include inserting donation data, updating personal data, showing debatable zakat and charity, and creating transactions.
 
 ## GUI Implementation
 
@@ -62,10 +71,61 @@ The GUI is created using PyQt, with the database managed by Python’s integrate
 - **Representative Page**
 - **Admin Page**
 
-## Conclusion
+## Technology
+- Python
+- SQLite
+- PyQt
+## Project Structure
+```
+.
+├── Design
+│   ├── 0NF ERD
+│   │   ├── First_dbms_er_diagram.jpeg
+│   │   └── First_dbms_er_diagram.png
+│   └── 3NF+
+│       ├── 3NF_form_database_project_mapping.jpeg
+│       └── 3NF_form_database_project_mapping.png
+├── Final
+│   ├── zakat&donation_Final_presentation.pptx
+│   └── ZnDFinalReportCSE-252.pdf
+├── Implementation
+│   ├── db.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── zakat_donation_db.db
+│   └── zakat_donation_platform.ui
+├── LICENSE
+└── README.md
+```
+## Installation and Usage
+### Prerequisites
+- Python(v3.x or later)
+- SQlite3
+- PyQt(v5 or later)
 
-This project aims to address the gaps in zakat collection and distribution in our nation. By centralizing the process and creating an efficient platform for charity contributions, we can ensure timely aid to disaster victims and proper distribution of zakat according to Shariah, ultimately assisting the underprivileged in improving their economic situation.
+### Clone the repository
+```bash
+git clone https://github.com/akib35/Zakat-and-Donation-Platform.git
+cd Zakat-and-Donation-Platform/
+```
 
----
+### Install dependencies
+```bash
+cd Implementation
+pip install -r requirements.txt
+```
+### Run 
+```bash
+python -m main
+```
+## Contributing 
+This platform is developed as study or academic purpose. The aim of the course was mainly focused on the procedure of development of a database and contribution to this project is limited.
 
-**Note**: This project is part of an academic endeavor and may require further enhancements for deployment in a real-world scenario.
+## License
+This project is licensed under the MIT License. See the [LICENSE](/LICENSE) file for more details.
+
+--- 
+
+Thank you being interested in our project! If you have any questions, please feel free to contact us.
+
+**Note**: This project is part of an academic endeavor and may require further enhancements for deployment in a real-world scenario. 
